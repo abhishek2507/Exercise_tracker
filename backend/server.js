@@ -18,11 +18,11 @@ connection.once('open',() => {
 
 })
 //middleware for mongoose is over
-//const exercisesRouter = require('./routes/exercises');
-//const usersRouter = require('./routes/users');
+const exercisesRouter = require('./routes/exercises');
+const usersRouter = require('./routes/users');
 
-//app.use('/exercises', exercisesRouter);
-//app.use('/users', userRouter);
+app.use('/exercises', exercisesRouter);
+app.use('/users', userRouter);
 
 app.listen(port,() => {
     console.log(`Server is running on port: ${port}`);
